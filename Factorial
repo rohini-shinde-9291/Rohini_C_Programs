@@ -1,0 +1,56 @@
+/*Header.h*/
+
+#include<stdio.h>
+
+int Factorial(int);
+
+/*Main.c*/
+
+/*Problem Statement : Program to find factorial of given number*/
+
+#include "Header.h"
+
+int main()
+{
+	int iNo = 0, iRet = 0;
+	
+	printf("Enter a number:\n");
+	scanf("%d",&iNo);
+	
+	iRet = Factorial(iNo);
+	printf("Factorial is:%d\n",iRet);
+	
+	return 0;
+}
+
+/*Helper.c*/
+
+
+/////////////////////////////////////////////////////////////////////
+//
+//		Function : Factorial
+//		Input : Integer
+//		Output : Integer
+//		Desription : Program to find factorial of given number
+//		Author : Rohini Babasaheb Shinde
+//		Date : 7th August 2020
+//
+/////////////////////////////////////////////////////////////////////
+
+#include "Header.h"
+
+int Factorial(int iNo)
+{
+	int iCnt = 0,iFacto = 1;
+	
+	if(iNo<0)
+	{
+		iNo = -iNo;
+	}
+	
+	for(iCnt=iNo;iCnt>=1;iCnt--)
+	{
+		iFacto = iFacto*iCnt;
+	}
+	return iFacto;
+}
